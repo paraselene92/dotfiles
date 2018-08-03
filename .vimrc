@@ -1,3 +1,5 @@
+"pushtest
+
 "=============================================
 "DeinScripts:
 if &compatible
