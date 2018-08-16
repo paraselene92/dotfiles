@@ -65,6 +65,7 @@ nnoremap k gk
 " 考え方はj,gjと同じ。kはカーソルを上げる。
 "inoremap ( ()<LEFT>
 nnoremap <C-n> gt
+" NERDTree用。Ctrl+n でタブ入れ替え。
 
 "=============================================
 filetype plugin indent off
