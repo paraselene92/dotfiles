@@ -64,6 +64,7 @@ nnoremap j gj
 nnoremap k gk
 " 考え方はj,gjと同じ。kはカーソルを上げる。
 "inoremap ( ()<LEFT>
+nnoremap <C-n> gt
 
 "=============================================
 filetype plugin indent off
