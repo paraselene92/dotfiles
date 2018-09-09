@@ -16,12 +16,12 @@ if dein#load_state('~/.cache/dein')
   " Required
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
   " Add or remobe your plugins here:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('kannokanno/previm')
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('chase/vim-ansible-yaml')
-  call dein#add('vim-airline/vim-airline')
+  " Managed by Toml's File
+  let g:config_dir = expand('~/.cache/dein/userconfig')
+  let s:toml = g:config_dir . '/plugins.toml'
+  let s:lazy_toml = g:config_dir . '/plugins_lazy.toml'
+  call dein#load_toml(s:toml, {'lazy':0})
+  call dein#load_toml(s:lazy_toml, {'lazy':1})
   " You can specify revision/branch/tag.
   call dein#add('Shougo/deol.nvim', { 'rev': '01203d4c9' })
   " Required
@@ -61,7 +61,7 @@ nnoremap j gj
 " j:折り返しを考慮せずカーソルを下げる。[Count]はgjと同じ。
 nnoremap k gk
 " 考え方はj,gjと同じ。kはカーソルを上げる。
-"inoremap ( ()<LEFT>
+inoremap ( ()<LEFT>
 
 "=============================================
 filetype plugin indent off
