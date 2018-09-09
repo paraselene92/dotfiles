@@ -1,3 +1,5 @@
+"pushtest
+
 "=============================================
 "DeinScripts:
 if &compatible
@@ -39,6 +41,8 @@ let NERDTreeShowHidden=1
 let g:NERDTreeShowBookmarks=1
 autocmd Vimenter * if !argc() | NERDTree | endif
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <C-n> gt
+" NERDTree用。Ctrl+n でタブ入れ替え。
 
 "=============================================
 "Previm:
