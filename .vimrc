@@ -7,21 +7,21 @@ endif
 " vimrc か gvimrc があると自動的に nocompatible になる。
 
 " Required
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=/root/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required
-if dein#load_state('~/.cache/dein') 
-  call dein#begin('~/.cache/dein')
+if dein#load_state('/root/.cache/dein') 
+  call dein#begin('/root/.cache/dein')
   " Let dein manage dein
   " Required
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('/root/.cache/dein/repos/github.com/Shougo/dein.vim')
   " Add or remobe your plugins here:
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('kannokanno/previm')
   call dein#add('scrooloose/nerdtree')
-  call dein#add('chase/vim-ansible-yaml')
   call dein#add('vim-airline/vim-airline')
+  call dein#add('pearofducks/ansible-vim')
   " You can specify revision/branch/tag.
   call dein#add('Shougo/deol.nvim', { 'rev': '01203d4c9' })
   " Required
@@ -67,7 +67,6 @@ nnoremap k gk
 filetype plugin indent off
 syntax enable
 
-
 "=============================================
 "Display:
 "ColorScheme:
@@ -94,8 +93,8 @@ set laststatus=2
 
 "=============================================
 "Editing:
-set smarttab
-set shiftwidth=2
+"set smarttab
+"set shiftwidth=2
 " 行頭に shiftwidth の数だけインデントする。行頭以外は tabstop の数だけ空白を打つ。
 " デフォルト shiftwidth=8
 set expandtab
