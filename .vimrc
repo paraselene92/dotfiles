@@ -1,5 +1,3 @@
-"pushtest
-
 "=============================================
 "DeinScripts:
 if &compatible
@@ -17,22 +15,12 @@ if dein#load_state('/root/.cache/dein')
   " Let dein manage dein
   " Required
   call dein#add('/root/.cache/dein/repos/github.com/Shougo/dein.vim')
-  " Add or remobe your plugins here:
-<<<<<<< HEAD
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('kannokanno/previm')
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('vim-airline/vim-airline')
-  call dein#add('pearofducks/ansible-vim')
-=======
   " Managed by Toml's File
   let g:config_dir = expand('~/.cache/dein/userconfig')
   let s:toml = g:config_dir . '/plugins.toml'
   let s:lazy_toml = g:config_dir . '/plugins_lazy.toml'
   call dein#load_toml(s:toml, {'lazy':0})
   call dein#load_toml(s:lazy_toml, {'lazy':1})
->>>>>>> f23f1edd77346fee67092b09c32d9a603fce512d
   " You can specify revision/branch/tag.
   call dein#add('Shougo/deol.nvim', { 'rev': '01203d4c9' })
   " Required
