@@ -1,3 +1,5 @@
+"pushtest
+
 "=============================================
 "DeinScripts:
 if &compatible
@@ -14,7 +16,7 @@ if dein#load_state('/root/.cache/dein')
   call dein#begin('/root/.cache/dein')
   " Let dein manage dein
   " Required
-  call dein#add('/root/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
   " Managed by Toml's File
   let g:config_dir = expand('~/.cache/dein/userconfig')
   let s:toml = g:config_dir . '/plugins.toml'
@@ -63,6 +65,11 @@ nnoremap j gj
 nnoremap k gk
 " 考え方はj,gjと同じ。kはカーソルを上げる。
 inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+inoremap < <><LEFT>
+inoremap ` ``<LEFT>
+inoremap { {}<LEFT>
 
 "=============================================
 filetype plugin indent off
