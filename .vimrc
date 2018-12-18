@@ -9,11 +9,11 @@ endif
 " vimrc か gvimrc があると自動的に nocompatible になる。
 
 " Required
-set runtimepath+=/root/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required
-if dein#load_state('/root/.cache/dein') 
-  call dein#begin('/root/.cache/dein')
+if dein#load_state('~/.cache/dein') 
+  call dein#begin('~/.cache/dein')
   " Let dein manage dein
   " Required
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
