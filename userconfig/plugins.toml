@@ -15,3 +15,28 @@ repo = 'chase/vim-ansible-yaml'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = "roxma/vim-hug-neovim-rpc"
+if = "!has('nvim')"
+
+[[plugins]]
+repo = "roxma/nvim-yarp"
+if = "!has('nvim')"
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+build= 'bash install.sh'
+rev = 'next'
+hook_add = '''
+set hidden
+let g:LanguageClient_serverCommands = {
+    \ 'typescript': ['typescript-language-server','--stdio'],
+    \ 'python': ['pyls'],
+    \ }
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" Or map each action separately
+'''
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
