@@ -31,5 +31,5 @@ make_symbolicfile(){
 
 clone
 dein_install
-make_synbolicfile
+make_symbolicfile
 
