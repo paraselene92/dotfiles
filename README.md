@@ -6,3 +6,4 @@
 
 ## Usage
 curl -o - https://raw.githubusercontent.com/paraselene92/dotfiles/master/install.sh | bash
+
