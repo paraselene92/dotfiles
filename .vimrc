@@ -55,7 +55,6 @@ augroup END
 "Keymap:
 nnoremap <S-a> ^
 nnoremap <S-l> $
-nnoremap <C-w> W
 "nnoremap 1 2 :1 を打つと2 のキーを打ったことになる
 "このとき2 はvim標準の動作をする。（map の入れ子にはならない）。
 "似たコマンドでmap があるが、これは入れ子が使える。
