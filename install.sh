@@ -25,6 +25,7 @@ make_symbolicfile(){
         echo "make symbolicfile"
         echo "================================="
         cd $HOME/.cache/dein && ln -s $HOME/dotfiles/userconfig/ userconfig
+        cd $HOME/.config/fish && ln -s $HOME/dotfiles/config.fish config.fish
         cd $HOME && ln -s $HOME/dotfiles/.vim .vim && ln -s $HOME/dotfiles/.vimrc .vimrc && ln -s $HOME/dotfiles/.tmux.conf .tmux.conf
         sleep 5
 }
