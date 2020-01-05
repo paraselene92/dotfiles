@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo apt install fish
 
 start(){
         clear
@@ -18,12 +17,14 @@ apt_install(){
         echo ""
         echo "update"
         echo "fish"
+        echo "fish-common"
         echo "python3-dev"
         echo "python3-pip"
+        echo "python3-setuptool"
         echo "git"
         echo "================================="
         sudo apt update
-        sudo apt install fish python3-dev python3-pip git
+        sudo apt install fish fish-common python3-dev python3-pip python3-setuptool git
         sleep 5
 }
 
