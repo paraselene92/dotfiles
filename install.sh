@@ -1,11 +1,36 @@
 #!/bin/bash
 sudo apt install fish
 
-clone(){
+start(){
+        clear
+        echo "================================="
+        echo "Start dotfiles sh..."
+        echo "================================="
+        sleep 5
+        echo -n "Times Up! Start!"
+        cd $HOME
+}
+
+apt_install(){
+        echo
+        echo "================================="
+        echo "apt install"
+        echo ""
+        echo "update"
+        echo "fish"
+        echo "python3-dev"
+        echo "python3-pip"
+        echo "git"
+        echo "================================="
+        sudo apt update
+        sudo apt install fish python3-dev python3-pip git
+        sleep 5
+}
+
+git_clone(){
         echo "================================="
         echo "git clone"
         echo "================================="
-        cd $HOME
         git clone https://github.com/paraselene92/dotfiles.git
         sleep 5
 }
@@ -30,7 +55,9 @@ make_symbolicfile(){
         sleep 5
 }
 
-clone
+start
+apt_install
+git_clone
 dein_install
 make_symbolicfile
 
