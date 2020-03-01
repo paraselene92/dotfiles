@@ -14,8 +14,8 @@ curl -o - https://raw.githubusercontent.com/paraselene92/dotfiles/master/install
 
 WT=windows terminal
 
-wallchange: change to new WT wallpaper
-wallreturn: revert to old WT wallpaper
-wallpicopen: open to current WT wallpaper in windows
-walltempcopy: copy current WT settings to template
+- wallchange: change to new WT wallpaper
+- wallreturn: revert to old WT wallpaper
+- wallpicopen: open to current WT wallpaper in windows
+- walltempcopy: copy current WT settings to template
 
