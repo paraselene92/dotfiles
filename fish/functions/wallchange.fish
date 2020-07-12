@@ -1,7 +1,7 @@
 function wallchange
-  set WTJSON_FILE (string join "" $WTJSON_DIR "profiles.json")
-  set WTJSON_OLDFILE (string join "" $WTJSON_DIR "profiles.json.old")
-  set WTJSON_TEMPFILE (string join "" $WTJSON_DIR "profiles.json.temp")
+  set WTJSON_FILE (string join "" $WTJSON_DIR "settings.json")
+  set WTJSON_OLDFILE (string join "" $WTJSON_DIR "settings.json.old")
+  set WTJSON_TEMPFILE (string join "" $WTJSON_DIR "settings.json.temp")
 
   cp -rf $WTJSON_FILE $WTJSON_OLDFILE
   set filename (ls $WC_PIC_DIR | shuf -n 1)
