@@ -10,6 +10,17 @@ start(){
         cd $HOME
 }
 
+apt_add_repository(){
+        echo
+        echo "================================="
+        echo "apt-add-repository"
+        echo "golang"
+        echo "git"
+        echo "================================="
+        sudo apt-add-repository -y ppa:longsleep/golang-backports
+        sudo apt-add-repository -y ppa:git-core/ppa
+}
+
 apt_install(){
         echo
         echo "================================="
@@ -59,8 +70,9 @@ make_symbolicfile(){
 }
 
 start
+apt_add_repository
 apt_install
-git_clone
+git_cline
 dein_install
 make_symbolicfile
 
