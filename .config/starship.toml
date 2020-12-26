@@ -1,0 +1,20 @@
+[aws]
+style = "bold blue"
+displayed_items = "all"
+[aws.region_aliases]
+ap-northeast-1 = "ap-n-1"
+
+[env_var]
+variable = "USER"
+
+[hostname]
+ssh_only = false
+prefix = "("
+suffix = ")"
+
+[memory_usage]
+disabled = false
+show_percentage = true
+
+[terraform]
+#show_version =true
