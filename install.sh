@@ -25,28 +25,90 @@ apt_install(){
         echo
         echo "================================="
         echo "apt install"
-        echo ""
         echo "update"
+        echo "upgrade"
         echo "fish"
         echo "fish-common"
+        echo "jq"
+        echo "keychain"
         echo "python3-dev"
         echo "python3-pip"
         echo "python3-setuptool"
         echo "git"
         echo "autopep8"
         echo "flake8"
+        echo "tig"
+        echo "tree"
         echo "================================="
         sudo apt update
-        sudo apt install fish fish-common python3-dev python3-pip python3-setuptool git autopep8 flake8
+        sudo apt upgrade
+        sudo apt install fish fish-common jq keychain python3-dev python3-pip python3-setuptool git autopep8 flake8 tig tree golang
         sleep 5
 }
 
-git_clone(){
+dotfile_clone(){
         echo "================================="
-        echo "git clone"
+        echo "dotfile clone"
         echo "================================="
         git clone https://github.com/paraselene92/dotfiles.git
         sleep 5
+}
+
+tfenv_clone(){
+        echo "================================="
+        echo "tfenv clone"
+        echo "================================="
+        git clone https://github.com/tfutils/tfenv.git $HOME/dotfiles/.tfenv
+        sudo ln -s $HOME/dotfiles/.tfenv/bin/* /usr/local/bin
+        which tfenv
+        sleep 5
+}
+
+tflint_clone(){
+        echo "================================="
+        echo "tflint clone"
+        echo "================================="
+        cd /tmp
+        curl -L "$(curl -Ls https://api.github.com/repos/terraform-linters/tflint/releases/latest | grep -o -E "https://.+?_linux_amd64.zip")" -o tflint.zip
+        unzip tflint.zip
+        sudo cp tflint /usr/local/bin/.
+        rm tflint.zip
+        which tflint
+}
+
+ghq_install(){
+        echo "================================="
+        echo "ghq install"
+        echo "================================="
+        cd /tmp
+        wget -o - https://github.com/x-motemen/ghq/releases/download/v1.1.5/ghq_linux_amd64.zip
+        unzip ghq_linux_amd64.zip
+        sudo cp ghq_linux_amd64/ghq /usr/local/bin/
+}
+
+fzf_install(){
+        echo "================================="
+        echo "fzf install"
+        echo "================================="
+        git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/dotfiles/.fzf
+        $HOME/dotfiles/.fzf/install
+}
+
+awscli_install(){
+        echo "================================="
+        echo "awscli install"
+        echo "================================="
+        cd /tmp
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        unzip awscliv2.zip
+        sudo ./aws/install
+}
+
+starship_install(){
+        echo "================================="
+        echo "starship_install"
+        echo "================================="
+        curl -fsSL htttps://starship.rs/install.sh | bash
 }
 
 dein_install(){
@@ -72,7 +134,12 @@ make_symbolicfile(){
 start
 apt_add_repository
 apt_install
-git_cline
+dotfile_clone
+tfenv_clone
+tflint_clone
+ghq_install
+fzf_install
+awscli_install
+starship_install
 dein_install
 make_symbolicfile
-

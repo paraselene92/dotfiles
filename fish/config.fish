@@ -6,6 +6,17 @@ set WTJSON_DIR "/mnt/c/Users/$WC_USERNAME/AppData/Local/Packages/Microsoft.Windo
 # starship init
 starship init fish | source
 
+# env
+set envpath $HOME/.local/bin /usr/local/go/bin $HOME/.tfenv/bin $HOME/.fzf/bin
+
+for i in $envpath;
+  if test -d $i
+    set PATH $PATH $i
+  else
+    echo $i no exist.
+  end
+end
+
 # invoke fish-ssh-agent
 fish_ssh_agent
 
