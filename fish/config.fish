@@ -3,6 +3,11 @@ set WC_USERNAME "paraselene92"
 set WC_PIC_DIR "/mnt/d/two_dimention"
 set WTJSON_DIR "/mnt/c/Users/$WC_USERNAME/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/"
 
+# color
+set fish_color_command white --bold
+set fish_color_redirection brblue --bold
+set fish_color_quote yellow --bold 
+
 # starship init
 starship init fish | source
 
