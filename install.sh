@@ -39,10 +39,11 @@ apt_install(){
         echo "flake8"
         echo "tig"
         echo "tree"
+        echo "sshpass"
         echo "================================="
         sudo apt update
         sudo apt upgrade
-        sudo apt install fish fish-common jq keychain python3-dev python3-pip python3-setuptool git autopep8 flake8 tig tree golang
+        sudo apt install fish fish-common jq keychain python3-dev python3-pip python3-setuptool git autopep8 flake8 tig tree golang sshpass
         sleep 5
 }
 
