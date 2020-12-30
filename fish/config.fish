@@ -7,6 +7,7 @@ set WTJSON_DIR "/mnt/c/Users/$WC_USERNAME/AppData/Local/Packages/Microsoft.Windo
 set fish_color_command white --bold
 set fish_color_redirection brblue --bold
 set fish_color_quote yellow --bold 
+set fish_color_param cyan --bold
 
 # starship init
 starship init fish | source
