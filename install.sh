@@ -93,14 +93,6 @@ ghq_install(){
         sudo cp ghq_linux_amd64/ghq /usr/local/bin/
 }
 
-fzf_install(){
-        echo "================================="
-        echo "fzf install"
-        echo "================================="
-        git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/dotfiles/.fzf
-        $HOME/dotfiles/.fzf/install
-}
-
 awscli_install(){
         echo "================================="
         echo "awscli install"
@@ -150,6 +142,14 @@ make_symbolicfile(){
         sleep 5
 }
 
+fzf_install(){
+        echo "================================="
+        echo "fzf install"
+        echo "================================="
+        git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/dotfiles/.fzf
+        $HOME/dotfiles/.fzf/install
+}
+
 start
 apt_add_repository
 apt_install
@@ -157,9 +157,9 @@ dotfile_clone
 tfenv_clone
 tflint_clone
 ghq_install
-fzf_install
 awscli_install
 starship_install
 dein_install
 kubectl_install
 make_symbolicfile
+fzf_install
