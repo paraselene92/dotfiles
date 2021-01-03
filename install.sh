@@ -45,7 +45,7 @@ apt_install(){
         echo "================================="
         sudo apt update
         sudo apt upgrade
-        sudo apt install \
+        sudo apt install -y \
           fish fish-common \
           jq keychain \
           python3-dev python3-pip python3-setuptool \
@@ -126,6 +126,7 @@ kubectl_install(){
         echo "================================="
         curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
         echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+        sudo apt update
         sudo apt-get install -y kubectl
         sleep 5
 }
