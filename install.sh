@@ -40,10 +40,16 @@ apt_install(){
         echo "tig"
         echo "tree"
         echo "sshpass"
+        echo "apt-transport-https"
+        echo "gung2"
         echo "================================="
         sudo apt update
         sudo apt upgrade
-        sudo apt install fish fish-common jq keychain python3-dev python3-pip python3-setuptool git autopep8 flake8 tig tree golang sshpass
+        sudo apt install \
+          fish fish-common \
+          jq keychain \
+          python3-dev python3-pip python3-setuptool \
+          git autopep8 flake8 tig tree golang sshpass apt-transport-https gnupg2
         sleep 5
 }
 
@@ -122,6 +128,16 @@ dein_install(){
         sleep 5
 }
 
+kubectl_install(){
+        echo "================================="
+        echo "kubectl install"
+        echo "================================="
+        curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+        echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+        sudo apt-get install -y kubectl
+        sleep 5
+}
+
 make_symbolicfile(){
         echo "================================="
         echo "make symbolicfile"
@@ -145,4 +161,5 @@ fzf_install
 awscli_install
 starship_install
 dein_install
+kubectl_install
 make_symbolicfile
