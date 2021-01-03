@@ -35,7 +35,7 @@ apt_install(){
         echo "keychain"
         echo "python3-dev"
         echo "python3-pip"
-        echo "python3-setuptool"
+        echo "python3-setuptools"
         echo "git"
         echo "autopep8"
         echo "flake8"
@@ -50,7 +50,7 @@ apt_install(){
         sudo apt install -y \
           fish fish-common \
           jq keychain \
-          python3-dev python3-pip python3-setuptool \
+          python3-dev python3-pip python3-setuptools \
           git autopep8 flake8 tig tree golang sshpass apt-transport-https gnupg2
         sleep 5
 }
