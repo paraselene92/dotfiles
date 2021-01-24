@@ -1,0 +1,6 @@
+# user environment
+function user_environment
+  set WC_USERNAME ""
+  set WC_PIC_DIR ""
+  set WTJSON_DIR "/mnt/c/Users/$WC_USERNAME/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/"
+end
