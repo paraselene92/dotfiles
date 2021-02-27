@@ -8,7 +8,7 @@ set fish_color_param cyan --bold
 starship init fish | source
 
 # env
-set envpath $HOME/.local/bin /usr/local/go/bin $HOME/.tfenv/bin $HOME/.fzf/bin
+set envpath $HOME/.local/bin /usr/local/go/bin $HOME/.tfenv/bin $HOME/.fzf/bin $HOME/.npm-global/bin
 
 for i in $envpath;
   if test -d $i
