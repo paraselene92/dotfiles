@@ -32,3 +32,10 @@ end
 # ssh-add (pemonly)
 ssh-add ~/.ssh/keys/site-lightsail01.pem
 
+# goenv settings
+set -x GOENV_ROOT $HOME/.goenv
+set -x PATH $GOENV_ROOT/bin $PATH
+eval (goenv init - | source)
+set -x PATH $GOROOT/bin $PATH
+set -x PATH $PATH $GOPATH/bin
+

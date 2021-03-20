@@ -132,6 +132,21 @@ kubectl_install(){
         sleep 5
 }
 
+goenv_install(){
+        echo "================================="
+        echo "goenv install"
+        echo "================================="
+        git clone https://github.com/syndbg/goenv.git $HOME/dotfiles/.goenv
+}
+
+fzf_install(){
+        echo "================================="
+        echo "fzf install"
+        echo "================================="
+        git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/dotfiles/.fzf
+        $HOME/dotfiles/.fzf/install
+}
+
 make_symbolicfile(){
         echo "================================="
         echo "make symbolicfile"
@@ -141,15 +156,8 @@ make_symbolicfile(){
         cd $HOME && ln -s $HOME/dotfiles/.vim .vim && ln -s $HOME/dotfiles/.vimrc .vimrc && ln -s $HOME/dotfiles/.tmux.conf .tmux.conf
         cd $HOME && ln -s $HOME/dotfiles/.tigrc .tigrc
         cd $HOME && ln -s $HOME/dotfiles/.tfenv .tfenv
+        cd $HOME && ln -s $HOME/dotfiles/.goenv .goenv
         sleep 5
-}
-
-fzf_install(){
-        echo "================================="
-        echo "fzf install"
-        echo "================================="
-        git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/dotfiles/.fzf
-        $HOME/dotfiles/.fzf/install
 }
 
 start
@@ -163,5 +171,7 @@ awscli_install
 starship_install
 dein_install
 kubectl_install
-make_symbolicfile
+goenv_install
 fzf_install
+make_symbolicfile
+
