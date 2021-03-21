@@ -147,6 +147,17 @@ fzf_install(){
         $HOME/dotfiles/.fzf/install
 }
 
+gh_cli_install(){
+        echo "================================="
+        echo "gh_cli install"
+        echo "================================="
+        ver=$(curl -s https://api.github.com/repos/cli/cli/tags | jq -r '.[0].name' | tr -d 'v')
+        wget -o - https://github.com/cli/cli/releases/download/v$ver/gh_"$ver"_linux_amd64.tar.gz
+        gunzip gh_"$ver"_linux_amd64.tar.gz
+        tar xvf gh_"$ver"_linux_amd64.tar
+        sudo mv gh_"$ver"_linux_amd64/bin/gh /usr/local/bin/.
+}
+
 make_symbolicfile(){
         echo "================================="
         echo "make symbolicfile"
@@ -173,5 +184,6 @@ dein_install
 kubectl_install
 goenv_install
 fzf_install
+gh_cli_install
 make_symbolicfile
 
