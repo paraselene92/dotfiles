@@ -1,0 +1,19 @@
+#!/bin/bash
+
+intern=eDP1
+extern=DP2
+
+if xrandr | grep "$extern disconnected"; then
+    xrandr --output "$intern" --auto --output "$extern" --off
+    xrandr >> /tmp/xrandr_res.txt
+    echo "off" >> /tmp/off.txt
+else
+    xrandr --output "$intern" --auto --output "$extern" --auto --right-of "$intern"
+    xrandr >> /tmp/xrandr_res.txt
+    echo "on" >> /tmp/on.txt
+fi
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
