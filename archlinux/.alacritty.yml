@@ -1,0 +1,43 @@
+env:
+  TERM: alacritty
+
+## Start Terminal Window Size
+window:
+  dimensions:
+    columns: 100
+    lines: 50
+  decorations: full
+  dynamic_title: true
+  class:
+    instance: Alacritty
+    general: Alacritty
+  gtk_theme_variant: None
+  opacity: 0.8
+
+scrolling:
+  history: 100000
+  multiplier: 1
+
+font:
+  normal:
+    family: monospace
+  bold:
+    family: monospace
+  italic:
+    family: monospace
+  bold_italic:
+    family: monospace
+  size: 9
+  offset:
+    x: 1
+    y: 1
+
+colors:
+  primary:
+# https://www.colordic.org/h
+    background: '#2b2b2b'
+    foreground: '#faf0e6'
+
+key_bindings:
+  - { key: N, mods: Control, action: CreateNewWindow }
+
