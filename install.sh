@@ -31,6 +31,7 @@ sh ./installer.sh $HOME/.cache/dein
 mkdir -p $HOME/dotfiles/.vim/colors
 cd $HOME/dotfiles/.vim/colors
 wget -o - https://raw.githubusercontent.com/cocopon/iceberg.vim/master/colors/iceberg.vim
+echo "\n\" local background settings\nset background=dark" >> $HOME/dotfiles/.vim/colors/iceberg.vim
 ln -sf $HOME/dotfiles/.vim $HOME/.vim
 
 ## npm
