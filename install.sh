@@ -16,6 +16,7 @@ ln -sf $HOME/dotfiles/.xinitrc $HOME/.xinitrc
 ln -sf $HOME/dotfiles/.xprofile $HOME/.xprofile
 ln -sf $HOME/dotfiles/.zprofile $HOME/.zprofile
 ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
+ln -sf $HOME/dotfiles/.zsh $HOME/.zsh
 
 ## zinit (zsh plugin manage)
 mkdir ~/dotfiles/.zinit
