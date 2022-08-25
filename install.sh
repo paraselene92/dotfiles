@@ -43,3 +43,7 @@ sudo n stable
 git clone https://github.com/syndbg/goenv.git ~/dotfiles/.goenv
 ln -sf $HOME/dotfiles/.goenv $HOME/.goenv
 
+## fzf
+wget -o - https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh
+wget -o - https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh
+
