@@ -9,6 +9,7 @@ fi
 ## symbolic link
 ln -sf $HOME/dotfiles/.alacritty.yml $HOME/.alacritty.yml
 ln -sf $HOME/dotfiles/.dircolors $HOME/.dircolors
+ln -sf $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 ln -sf $HOME/dotfiles/.npmrc $HOME/.npmrc
 ln -sf $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/dotfiles/.vimrc $HOME/.vimrc
