@@ -102,12 +102,12 @@ s3mpv() {
   local bucketname filename fileurl
   bucketname='radiko-docker-bucket'
   filename=$(aws s3api list-objects --bucket $bucketname | jq -r -c '.Contents[] | select(.StorageClass == "STANDARD") | .Key' | fzf +m)
-  if [[ -v "$filename" ]]; then
+  if [[ -z $filename ]]; then
+    echo "Stop."
+  else
     fileurl=$(aws s3 presign s3://$bucketname/$filename)
     echo "Listening $filename ..."
     mpv --ontop=yes --border=yes $fileurl
-  else
-    echo "Stop."
   fi
 }
 
