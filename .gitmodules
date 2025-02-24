@@ -1,3 +1,6 @@
 [submodule ".config/nvim/kickstart.nvim"]
 	path = .config/nvim/kickstart.nvim
 	url = git@github.com:paraselene92/kickstart.nvim.git
+[submodule ".config/nvim/lua/kickstart"]
+	path = .config/nvim/lua/kickstart
+	url = git@github.com:paraselene92/kickstart.nvim.git
