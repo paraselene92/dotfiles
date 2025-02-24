@@ -1,4 +1,4 @@
 return {
-  'folke/tokyonight.nvim',
-  disable = false,
+	"folke/tokyonight.nvim",
+	disable = false,
 }
