@@ -21,7 +21,7 @@ return {
 				yaml = false,
 				markdown = false,
 				gitcommit = true,
-				["*"] = true,
+				["*"] = false,
 			},
 		})
 	end,
