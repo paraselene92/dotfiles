@@ -14,3 +14,7 @@ end, { desc = "GitSigns [h]unk [d]iff" })
 vim.keymap.set("n", "<leader>hi", function()
 	require("gitsigns").preview_hunk_inline()
 end, { desc = "GitSigns [h]unk preview [i]nline" })
+
+vim.keymap.set("n", "<leader>hr", function()
+	require("gitsigns").reset_hunk()
+end, { desc = "GitSigns [h]unk [r]eset" })
