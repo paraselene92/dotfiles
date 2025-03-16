@@ -42,8 +42,6 @@ zinit light zsh-users/zsh-autosuggestions
 bindkey '^j' autosuggest-accept
 
 ## active HOME/End key
-#bindkey "^[[H" beginning-of-line
-#bindkey "^[[F" end-of-line
 bindkey "^[[1" beginning-of-line
 bindkey "^[[4" end-of-line
 
@@ -59,7 +57,9 @@ setopt share_history
 zstyle ':completion:*:default' menu select=1
 
 ## starship
-eval "$(starship init zsh)"
+if command -v starship > /dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
 
 ## keychain
 for x in $keys;
@@ -105,4 +105,9 @@ if [ -f '~/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '~/Downloads/googl
 # The next line enables shell command completion for gcloud.
 if [ -f '~/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '~/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+# .zshディレクトリから関数と変数をロードする設定を.zshrcに追加
+for file in "~/.zsh/**/*.zsh"; do
+    source "$file"
+done
 
