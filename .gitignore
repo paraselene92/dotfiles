@@ -1,2 +1,3 @@
+macOS/.zsh/local/private-functions.zsh
 *.swp
 .config/nvim/lazy-lock.json

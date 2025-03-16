@@ -1,0 +1,53 @@
+[colors.primary]
+background = "#2b2b2b"
+foreground = "#faf0e6"
+
+#[env]
+#TERM = "ansi"
+
+[font]
+size = 16
+
+[font.normal]
+family = "Hack Nerd Font"
+
+[font.offset]
+x = 1
+y = 1
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "N"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[scrolling]
+history = 100000
+multiplier = 1
+
+[window]
+decorations = "Full"
+dynamic_title = true 
+decorations_theme_variant = "None"
+opacity = 0.8
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.dimensions]
+columns = 100
+lines = 50
+
+[selection]
+save_to_clipboard = true
+
