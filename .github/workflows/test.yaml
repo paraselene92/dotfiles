@@ -1,0 +1,31 @@
+# .github/workflows/test.yml
+name: Dotfiles Test
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+      - name: チェックアウト
+        uses: actions/checkout@v3
+        
+      - name: テストスクリプト実行権限の付与
+        run: chmod +x test/test_script.sh
+        
+      - name: テストスクリプトの実行
+        run: ./test/test_script.sh
+
+      - name: シェルスクリプト構文チェック
+        run: |
+          for script in $(find . -name "*.sh"); do
+            bash -n "$script" || exit 1
+          done
