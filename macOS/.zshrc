@@ -107,7 +107,7 @@ if [ -f '~/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '~/Downloads
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
 # .zshディレクトリから関数と変数をロードする設定を.zshrcに追加
-for file in "~/.zsh/**/*.zsh"; do
+for file in ~/.zsh/**/*.zsh; do
     source "$file"
 done
 
