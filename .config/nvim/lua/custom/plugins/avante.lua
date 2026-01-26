@@ -3,9 +3,10 @@ return {
 	event = "VeryLazy",
 	version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
 	opts = {
+		provider = "copilot",
 		providers = {
 			copilot = {
-				model = "claude-sonnet-4",
+				model = "claude-sonnet-4.5",
 				max_line = 2000,
 				extra_requests_body = {
 					temperature = 0.1,
